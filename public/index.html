@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padibuild | Premium Shipping Container Homes, Offices & Structures in Nigeria</title>
-    <meta name="description" content="Padibuild specializes in buying, selling, and converting shipping containers into luxury prefab homes, offices, shops, and more. Fast, sustainable, and affordable solutions in Lagos and nationwide.">
-    <meta name="keywords" content="shipping container homes Nigeria, prefab houses Lagos, container office, container shop, modular homes, sustainable building">
-    
-    <meta property="og:title" content="Padibuild | Premium Container Structures & Prefab Housing">
-    <meta property="og:description" content="Transforming steel containers into modern, eco-friendly living and working spaces across Nigeria.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80">
+    <title>Padibuild | Premium Shipping Container Architecture</title>
+    <meta name="description"
+        content="Padibuild transforms shipping containers into luxury homes, modern offices, and retail spaces in Nigeria. Sustainable, fast, and premium quality.">
+    <meta name="keywords"
+        content="shipping container homes Nigeria, prefab houses Lagos, container office, container shop, modular homes, sustainable building">
+
+    <meta property="og:title" content="Padibuild | Premium Container Structures">
+    <meta property="og:description" content="Redefining construction with luxury container architecture.">
+    <meta property="og:image" content="images/hero.png">
     <meta property="og:url" content="https://padibuild.com">
     <meta property="og:type" content="website">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 font-sans antialiased">
 
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
+<body class="bg-gray-50 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-card" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-24">
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="text-3xl font-bold text-orange-600">PADI</span><span class="text-3xl font-bold text-gray-800">BUILD</span>
+                    <span class="text-3xl font-extrabold tracking-tighter text-orange-600">PADI</span>
+                    <span class="text-3xl font-extrabold tracking-tighter text-gray-900">BUILD</span>
                 </div>
 
-                <div class="hidden md:flex space-x-10 items-center">
-                    <a href="#home" class="text-gray-700 hover:text-orange-600 font-medium transition">Home</a>
-                    <a href="#services" class="text-gray-700 hover:text-orange-600 font-medium transition">Services</a>
-                    <a href="#services" class="text-gray-700 hover:text-orange-600 font-medium transition">Projects</a>
-                    <a href="#about" class="text-gray-700 hover:text-orange-600 font-medium transition">About</a>
-                    <a href="#contact" class="bg-orange-600 text-white px-6 py-2.5 rounded-md hover:bg-orange-700 transition font-medium">Get Quote</a>
+                <div class="hidden md:flex space-x-12 items-center">
+                    <a href="#home"
+                        class="text-gray-800 hover:text-orange-600 font-medium transition text-sm uppercase tracking-wide">Home</a>
+                    <a href="#services"
+                        class="text-gray-800 hover:text-orange-600 font-medium transition text-sm uppercase tracking-wide">Services</a>
+                    <a href="#projects"
+                        class="text-gray-800 hover:text-orange-600 font-medium transition text-sm uppercase tracking-wide">Projects</a>
+                    <a href="#about"
+                        class="text-gray-800 hover:text-orange-600 font-medium transition text-sm uppercase tracking-wide">About</a>
+                    <a href="#contact"
+                        class="bg-orange-600 text-white px-8 py-3 rounded-full hover:bg-orange-700 transition font-bold shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-0.5">Get
+                        Quote</a>
                 </div>
 
                 <div class="md:hidden">
@@ -44,143 +55,413 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-lg">
-            <div class="px-4 py-6 space-y-5">
-                <a href="#home" class="block text-gray-800 hover:text-orange-600 font-medium">Home</a>
-                <a href="#services" class="block text-gray-800 hover:text-orange-600 font-medium">Services</a>
-                <a href="#services" class="block text-gray-800 hover:text-orange-600 font-medium">Projects</a>
-                <a href="#about" class="block text-gray-800 hover:text-orange-600 font-medium">About</a>
-                <a href="#contact" class="block bg-orange-600 text-white px-6 py-3 rounded-md hover:bg-orange-700 transition text-center font-medium">Get a Quote</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t absolute w-full left-0 glass-card">
+            <div class="px-4 py-8 space-y-6 text-center">
+                <a href="#home" class="block text-gray-800 hover:text-orange-600 font-bold text-xl">Home</a>
+                <a href="#services" class="block text-gray-800 hover:text-orange-600 font-bold text-xl">Services</a>
+                <a href="#projects" class="block text-gray-800 hover:text-orange-600 font-bold text-xl">Projects</a>
+                <a href="#about" class="block text-gray-800 hover:text-orange-600 font-bold text-xl">About</a>
+                <a href="#contact"
+                    class="inline-block bg-orange-600 text-white px-10 py-4 rounded-full hover:bg-orange-700 transition font-bold text-lg shadow-lg">Get
+                    a Quote</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white px-4">
-        <div class="max-w-5xl">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-shadow leading-tight">Steel Structures.<br>Modern Living.</h1>
-            <p class="text-xl md:text-3xl mb-10 max-w-3xl mx-auto font-light text-shadow">Premium shipping container homes, offices, shops & custom structures — sustainable, fast, and built for Nigeria.</p>
-            <div class="flex flex-col sm:flex-row justify-center gap-5">
-                <a href="#services" class="bg-orange-600 hover:bg-orange-700 text-white px-10 py-4 rounded-lg font-bold text-lg transition shadow-lg">View Projects</a>
-                <a href="#contact" class="bg-white/90 hover:bg-white text-gray-900 px-10 py-4 rounded-lg font-bold text-lg transition shadow-lg">Inquire Now</a>
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <img src="images/hero_bright.png" alt="Luxury Container Home"
+            class="absolute inset-0 w-full h-full object-cover -z-10">
+
+        <div class="max-w-6xl w-full px-4 relative z-10 text-center" data-aos="fade-up" data-aos-duration="1000">
+            <span
+                class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 shadow-lg">Future
+                of Construction</span>
+            <h1 class="text-4xl md:text-7xl lg:text-8xl font-extrabold mb-6 text-white leading-tight drop-shadow-2xl">
+                Redefining <br> <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-500">Modern
+                    Living</span>
+            </h1>
+            <p
+                class="text-lg md:text-2xl mb-10 text-gray-100 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
+                Premium shipping container homes, offices, and retail spaces. <br class="hidden md:block">Sustainable,
+                fast, and architectural masterpieces.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+                <a href="#projects"
+                    class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-xl hover:shadow-orange-500/40 transform hover:-translate-y-1">View
+                    Gallery</a>
+                <a href="#contact"
+                    class="glass text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-full font-bold text-lg transition shadow-xl backdrop-blur-sm border border-white/30">Start
+                    Project</a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#services" class="text-white opacity-80 hover:opacity-100 transition">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Service Widget / What We Do -->
+    <section id="services" class="py-16 md:py-32 bg-white relative overflow-hidden">
+        <div
+            class="absolute top-0 right-0 w-1/3 h-full bg-gray-50 skew-x-12 transform translate-x-20 -z-0 hidden md:block">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 md:mb-20" data-aos="fade-up">
+                <h2 class="text-orange-600 font-bold tracking-widest uppercase mb-3 text-sm md:text-base">Our Expertise
+                </h2>
+                <h3 class="text-3xl md:text-6xl font-extrabold text-gray-900 mb-4 md:mb-6">Crafted for Quality</h3>
+                <p class="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto">From raw industrial steel to refined
+                    luxury spaces, we handle every stage of the transformation.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 md:gap-10">
+                <!-- Service 1 -->
+                <div class="group relative rounded-3xl overflow-hidden shadow-2xl hover-lift h-[400px] md:h-[500px]"
+                    data-aos="fade-up" data-aos-delay="0">
+                    <img src="images/service-container.png" alt="Container Sales"
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent opacity-90 transition duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 p-8 md:p-10 translate-y-4 group-hover:translate-y-0 transition duration-500">
+                        <div
+                            class="w-12 h-12 md:w-14 md:h-14 bg-orange-600 rounded-2xl flex items-center justify-center text-white text-xl md:text-2xl mb-4 md:mb-6 shadow-lg">
+                            <i class="fas fa-ship"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-2 md:mb-3">Container Sales</h3>
+                        <p
+                            class="text-gray-300 mb-4 md:mb-6 opacity-0 group-hover:opacity-100 transition duration-500 delay-100 line-clamp-3 text-sm md:text-base">
+                            Sourcing high-grade new and used shipping containers (20ft, 40ft, High Cube) for storage or
+                            logistical needs.</p>
+                        <a href="#contact"
+                            class="text-orange-400 font-bold hover:text-orange-300 flex items-center gap-2">Order Now <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group relative rounded-3xl overflow-hidden shadow-2xl hover-lift h-[400px] md:h-[500px] md:-mt-8"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/service-home.png" alt="Prefab Housing"
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent opacity-90 transition duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 p-8 md:p-10 translate-y-4 group-hover:translate-y-0 transition duration-500">
+                        <div
+                            class="w-12 h-12 md:w-14 md:h-14 bg-orange-600 rounded-2xl flex items-center justify-center text-white text-xl md:text-2xl mb-4 md:mb-6 shadow-lg">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-2 md:mb-3">Prefab Housing</h3>
+                        <p
+                            class="text-gray-300 mb-4 md:mb-6 opacity-0 group-hover:opacity-100 transition duration-500 delay-100 line-clamp-3 text-sm md:text-base">
+                            Turnkey luxury homes. Eco-friendly, fully insulated, and architecturally stunning living
+                            spaces delivered to your site.</p>
+                        <a href="#contact"
+                            class="text-orange-400 font-bold hover:text-orange-300 flex items-center gap-2">View Plans
+                            <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group relative rounded-3xl overflow-hidden shadow-2xl hover-lift h-[400px] md:h-[500px]"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/service-shop.png" alt="Retail & Commercial"
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent opacity-90 transition duration-300">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 p-8 md:p-10 translate-y-4 group-hover:translate-y-0 transition duration-500">
+                        <div
+                            class="w-12 h-12 md:w-14 md:h-14 bg-orange-600 rounded-2xl flex items-center justify-center text-white text-xl md:text-2xl mb-4 md:mb-6 shadow-lg">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-2 md:mb-3">Retail & Shops</h3>
+                        <p
+                            class="text-gray-300 mb-4 md:mb-6 opacity-0 group-hover:opacity-100 transition duration-500 delay-100 line-clamp-3 text-sm md:text-base">
+                            Innovative commercial spaces. Pop-up shops, cafes, and mobile offices designed to attract
+                            customers and expand your brand.</p>
+                        <a href="#contact"
+                            class="text-orange-400 font-bold hover:text-orange-300 flex items-center gap-2">Get a Quote
+                            <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold mb-12">What We Do</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 border rounded-xl hover:shadow-xl transition group">
-                    <div class="text-orange-600 text-4xl mb-4 group-hover:scale-110 transition-transform"><i class="fas fa-ship"></i></div>
-                    <h3 class="text-2xl font-bold mb-2">Container Sales</h3>
-                    <p class="text-gray-600">Quality new and used shipping containers in various sizes (20ft, 40ft, High Cube).</p>
-                </div>
-                <div class="p-8 border rounded-xl hover:shadow-xl transition group">
-                    <div class="text-orange-600 text-4xl mb-4 group-hover:scale-110 transition-transform"><i class="fas fa-home"></i></div>
-                    <h3 class="text-2xl font-bold mb-2">Prefab Housing</h3>
-                    <p class="text-gray-600">Eco-friendly, durable, and stylish homes built from recycled steel containers.</p>
-                </div>
-                <div class="p-8 border rounded-xl hover:shadow-xl transition group">
-                    <div class="text-orange-600 text-4xl mb-4 group-hover:scale-110 transition-transform"><i class="fas fa-store"></i></div>
-                    <h3 class="text-2xl font-bold mb-2">Retail & Shops</h3>
-                    <p class="text-gray-600">Customizable pop-up shops, cafes, and office spaces designed for mobility.</p>
-                </div>
-            </div>
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-32 bg-gray-900 text-white relative overflow-hidden">
+        <div
+            class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
         </div>
-    </section>
 
-    <section id="about" class="py-20 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-10 md:mb-0">
-                <img src="https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?auto=format&fit=crop&w=800&q=80" alt="Container Design" class="rounded-lg shadow-2xl">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-20">
+            <div class="md:w-1/2" data-aos="fade-right">
+                <div class="relative">
+                    <div
+                        class="absolute top-0 -left-4 w-24 h-24 bg-orange-600 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob">
+                    </div>
+                    <img src="images/about.png" alt="Construction Process"
+                        class="rounded-3xl shadow-2xl relative z-10 border-4 border-gray-800">
+
+                    <div
+                        class="absolute -bottom-10 -right-10 bg-white text-gray-900 p-6 md:p-8 rounded-2xl shadow-xl max-w-xs z-20 hidden md:block">
+                        <p class="text-4xl font-extrabold text-orange-600 mb-1">5+</p>
+                        <p class="font-bold text-lg">Years of Engineering Excellence</p>
+                    </div>
+                </div>
             </div>
-            <div class="md:w-1/2 md:pl-16">
-                <h2 class="text-4xl font-bold mb-6">About Padibuild</h2>
-                <p class="text-gray-700 text-lg mb-6">
-                    At Padibuild, we believe in sustainable construction. We transform industrial steel into functional, beautiful, and affordable spaces. Whether you are looking for a raw container for storage or a fully finished luxury home, we have the expertise to deliver.
+
+            <div class="md:w-1/2" data-aos="fade-left">
+                <h2 class="text-orange-500 font-bold tracking-widest uppercase mb-3 text-sm md:text-base">About Us</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold mb-6 md:mb-8 leading-tight">We Build the Extraordinary
+                    out of the Ordinary.</h3>
+                <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                    Padibuild is Nigeria's premier container conversion company. We don't just stack boxes; we engineer
+                    lifestyle solutions. By upcycling industrial steel, we create structures that are stronger, faster
+                    to build, and more sustainable than traditional concrete builds.
                 </p>
-                <ul class="space-y-4">
-                    <li class="flex items-center"><i class="fas fa-check-circle text-orange-600 mr-2"></i> Quality Certified Steel</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-orange-600 mr-2"></i> Fast Turnaround Time</li>
-                    <li class="flex items-center"><i class="fas fa-check-circle text-orange-600 mr-2"></i> Nationwide Delivery</li>
-                </ul>
+
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-orange-500">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold mb-1">Speed of Construction</h4>
+                            <p class="text-gray-500">30-50% faster than traditional brick and mortar construction.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-orange-500">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold mb-1">Eco-Friendly</h4>
+                            <p class="text-gray-500">Upcycling shipping containers reduces global steel waste
+                                significantly.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div
+                            class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-orange-500">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-xl font-bold mb-1">Durability</h4>
+                            <p class="text-gray-500">Cor-ten steel structure designed to withstand harsh marine
+                                environments.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold">Start Your Project</h2>
-                <p class="text-gray-600 mt-4">Tell us what you need and we will get back to you with a quote.</p>
+    <!-- Gallery / Projects Section -->
+    <section id="projects" class="py-16 md:py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-20">
+                <h2 class="text-orange-600 font-bold tracking-widest uppercase mb-3 text-sm md:text-base">Portfolio</h2>
+                <h3 class="text-3xl md:text-5xl font-extrabold text-gray-900">Recent Projects</h3>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="bg-gray-900 text-white p-10 rounded-2xl shadow-xl">
-                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-4 text-orange-500"></i>
-                            <p>123 Container Hub, Industrial Estate, Lagos/Port-Harcourt</p>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-phone mr-4 text-orange-500"></i>
-                            <p>+234 08095600003</p>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope mr-4 text-orange-500"></i>
-                            <p>padibuild@maimail.com</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" data-aos="zoom-in">
+                    <img src="images/project-lekki.png" alt="Lekki Studio"
+                        class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <h4 class="text-2xl font-bold text-white mb-2">Lekki Studio Apartment</h4>
+                            <p class="text-gray-300">Residential</p>
                         </div>
                     </div>
                 </div>
 
-                <form action="/send-email" method="POST" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe" 
-                                class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500">
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <img src="images/project-abuja.png" alt="Abuja Office"
+                        class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <h4 class="text-2xl font-bold text-white mb-2">Abuja Tech Hub</h4>
+                            <p class="text-gray-300">Office Space</p>
                         </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com" 
-                                class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500">
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <img src="images/project-ikeja.png" alt="Ikeja Cafe"
+                        class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <h4 class="text-2xl font-bold text-white mb-2">The Box Cafe Ikeja</h4>
+                            <p class="text-gray-300">Retail</p>
                         </div>
                     </div>
-                    <div>
-                        <label for="service" class="block text-sm font-medium text-gray-700">Service Required</label>
-                        <select id="service" name="service" class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500">
-                            <option value="buy_container">Buy Shipping Container</option>
-                            <option value="prefab_housing">Prefab Housing Project</option>
-                            <option value="office_shop">Container Office/Shop</option>
-                            <option value="custom">Custom Structure</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="details" class="block text-sm font-medium text-gray-700">Project Details</label>
-                        <textarea id="details" name="message" rows="4" required placeholder="Tell us about your requirements..." 
-                            class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-orange-600 text-white font-bold py-3 rounded-md hover:bg-orange-700 transition shadow-lg">Send Inquiry</button>
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="mb-4 text-white font-bold text-xl">PADIBUILD</p>
-            <p class="text-sm">© 2024 Padibuild Containers. All rights reserved.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-white relative">
+        <div class="absolute left-0 bottom-0 w-1/2 h-1/2 bg-orange-50 -z-0 rounded-tr-[100px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+                <div data-aos="fade-right">
+                    <h2 class="text-orange-600 font-bold tracking-widest uppercase mb-3">Get Started</h2>
+                    <h3 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-8">Let's Build Your Vision</h3>
+                    <p class="text-xl text-gray-500 mb-12">Whether you need a simple storage unit or a complex
+                        multi-container home, our team is ready to bring your idea to life.</p>
+
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-6 p-6 bg-white shadow-xl rounded-2xl border border-gray-100">
+                            <div
+                                class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-2xl">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Call Us</p>
+                                <p class="text-2xl font-bold text-gray-900">+234 0809 560 0003</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-6 p-6 bg-white shadow-xl rounded-2xl border border-gray-100">
+                            <div
+                                class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Email Us</p>
+                                <p class="text-2xl font-bold text-gray-900">padibuild@maimail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-10 md:p-12 rounded-3xl shadow-2xl border border-gray-100" data-aos="fade-left">
+                    <form action="/send-email" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe"
+                                class="w-full px-6 py-4 bg-gray-50 border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent transition outline-none">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com"
+                                class="w-full px-6 py-4 bg-gray-50 border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent transition outline-none">
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-sm font-bold text-gray-700 mb-2">Service Type</label>
+                            <div class="relative">
+                                <select id="service" name="service"
+                                    class="w-full px-6 py-4 bg-gray-50 border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent transition outline-none appearance-none cursor-pointer">
+                                    <option value="Buy Shipping Container">Buy Shipping Container</option>
+                                    <option value="Prefab Housing Project">Prefab Housing Project</option>
+                                    <option value="Container Office/Shop">Container Office/Shop</option>
+                                    <option value="Custom Structure">Custom Structure</option>
+                                </select>
+                                <div
+                                    class="absolute inset-y-0 right-0 flex items-center px-6 pointer-events-none text-gray-500">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="details" class="block text-sm font-bold text-gray-700 mb-2">Project
+                                Details</label>
+                            <textarea id="details" name="message" rows="4" required
+                                placeholder="Tell us about your requirements..."
+                                class="w-full px-6 py-4 bg-gray-50 border-gray-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-orange-500 focus:border-transparent transition outline-none resize-none"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-orange-600 text-white font-bold py-5 rounded-xl hover:bg-orange-700 transition shadow-lg hover:shadow-orange-500/30 text-lg">Send
+                            Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800 relative">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="text-3xl font-extrabold tracking-tighter text-orange-600">PADI</span>
+                <span class="text-3xl font-extrabold tracking-tighter text-white">BUILD</span>
+                <p class="text-gray-400 mt-2 text-sm">© 2024 Padibuild Containers. All rights reserved.</p>
+            </div>
+
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+                class="group flex items-center gap-3 text-gray-400 hover:text-white transition cursor-pointer">
+                <span class="font-bold uppercase tracking-widest text-sm">Back to Top</span>
+                <div
+                    class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-orange-600 group-hover:border-orange-600 transition">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </button>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-out-cubic',
+        });
+
+        // Mobile Menu Toggle
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
 
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
+
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg', 'bg-white/90', 'backdrop-blur-md');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('shadow-lg', 'bg-white/90', 'backdrop-blur-md');
+                navbar.classList.add('py-4');
+            }
+        });
     </script>
 </body>
+
 </html>
