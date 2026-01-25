@@ -2,6 +2,7 @@
   "name": "padibuild",
   "version": "1.0.1",
   "description": "Modular build for Padibuild",
+  "author": "CuriousHack",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
