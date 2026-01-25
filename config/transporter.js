@@ -9,6 +9,10 @@ const transporter = nodemailer.createTransport({
     auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS
+    },
+    tls: {
+        // This tells Node to not crash if the certificate name doesn't match 'localhost'
+        rejectUnauthorized: false
     }
 });
 
