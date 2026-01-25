@@ -1,0 +1,5 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/padimico/repositories/padibuild
+    - /bin/npm install
+    - /bin/npm run build || true
