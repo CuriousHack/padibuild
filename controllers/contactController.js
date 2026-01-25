@@ -7,7 +7,7 @@ exports.handleContactForm = async (req, res) => {
 
     // 1. Validation
     if (!name || !email || !message) {
-        return res.status(400).send('<h1>Error</h1><p>Please fill in all required fields.</p>');
+        return res.status(400).json({ success: false, message: 'Please fill in all required fields.' });
     }
 
     try {
@@ -35,11 +35,11 @@ exports.handleContactForm = async (req, res) => {
 
         console.log(`📧 Emails sent successfully for client: ${name}`);
 
-        // 4. Response (Redirect back to home with success hash)
-        res.redirect('/?status=success#contact');
+        // 4. Response (JSON)
+        res.status(200).json({ success: true, message: 'Inquiry sent successfully! We will contact you shortly.' });
 
     } catch (error) {
         console.error('❌ Email Logic Error:', error);
-        res.status(500).send('<h1>Server Error</h1><p>Something went wrong. Please try again later.</p>');
+        res.status(500).json({ success: false, message: 'Something went wrong. Please try again later.' });
     }
 };
