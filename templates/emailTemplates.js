@@ -1,7 +1,7 @@
 const styles = {
-    header: `background-color: #111827; padding: 20px; text-align: center; border-bottom: 4px solid #dc2626;`,
+    header: `background-color: #ffffff; padding: 20px; text-align: center; border-bottom: 4px solid #dc2626;`,
     logo: `color: #dc2626; font-size: 24px; font-weight: bold; text-decoration: none; font-family: Arial, sans-serif;`,
-    logoText: `color: #ffffff;`,
+    logoText: `color: #111827;`,
     body: `font-family: Arial, sans-serif; line-height: 1.6; color: #374151; max-width: 600px; margin: 0 auto; padding: 20px;`,
     footer: `background-color: #f3f4f6; padding: 15px; text-align: center; font-size: 12px; color: #6b7280; font-family: Arial, sans-serif;`,
     button: `display: inline-block; background-color: #dc2626; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px;`,
@@ -14,8 +14,8 @@ exports.adminNotification = ({ name, email, service, message }) => {
     return `
     <div style="${styles.body}">
         <div style="${styles.header}">
-            <img src="https://padibuild.padimi.com.ng/images/logo.png" alt="Padibuild" style="height: 50px; display: block; margin: 0 auto 10px;">
-            <span style="${styles.logo}">PADI<span style="${styles.logoText}">BUILD</span></span>
+            <img src="https://padibuild.padimi.com.ng/images/logo.png" alt="Padibuild" style="height: 50px; display: inline-block; vertical-align: middle; margin-right: 10px;">
+            <span style="${styles.logo} vertical-align: middle;">PADI<span style="${styles.logoText}">BUILD</span></span>
         </div>
         <h2>New Project Inquiry</h2>
         <p><strong>Status:</strong> New Lead</p>
@@ -37,8 +37,8 @@ exports.userConfirmation = ({ name, service, message }) => {
     return `
     <div style="${styles.body}">
         <div style="${styles.header}">
-            <img src="https://padibuild.padimi.com.ng/images/logo.png" alt="Padibuild" style="height: 50px; display: block; margin: 0 auto 10px;">
-            <span style="${styles.logo}">PADI<span style="${styles.logoText}">BUILD</span></span>
+            <img src="https://padibuild.padimi.com.ng/images/logo.png" alt="Padibuild" style="height: 50px; display: inline-block; vertical-align: middle; margin-right: 10px;">
+            <span style="${styles.logo} vertical-align: middle;">PADI<span style="${styles.logoText}">BUILD</span></span>
         </div>
         <h3>Hello ${name},</h3>
         <p>We received your inquiry regarding <strong>${service}</strong>.</p>
