@@ -14,7 +14,7 @@ exports.adminNotification = ({ name, email, service, message }) => {
     return `
     <div style="${styles.body}">
         <div style="${styles.header}">
-            <img src="https://padibuild.com/images/logo.png" alt="Padibuild" style="height: 50px; display: block; margin: 0 auto 10px;">
+            <img src="https://padibuild.padimi.com.ng/images/logo.png" alt="Padibuild" style="height: 50px; display: block; margin: 0 auto 10px;">
             <span style="${styles.logo}">PADI<span style="${styles.logoText}">BUILD</span></span>
         </div>
         <h2>New Project Inquiry</h2>
@@ -37,7 +37,7 @@ exports.userConfirmation = ({ name, service, message }) => {
     return `
     <div style="${styles.body}">
         <div style="${styles.header}">
-            <img src="https://padibuild.com/images/logo.png" alt="Padibuild" style="height: 50px; display: block; margin: 0 auto 10px;">
+            <img src="https://padibuild.padimi.com.ng/images/logo.png" alt="Padibuild" style="height: 50px; display: block; margin: 0 auto 10px;">
             <span style="${styles.logo}">PADI<span style="${styles.logoText}">BUILD</span></span>
         </div>
         <h3>Hello ${name},</h3>
