@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  /* Adding your approved padiRed to the theme */
+  --color-padi-red: #dc2626;
+  
+  /* You can also add custom fonts or animations here if needed */
+  --font-sans: "Inter", "sans-serif";
+}
+
+/* Any legacy styles from your original style.css can go here */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
