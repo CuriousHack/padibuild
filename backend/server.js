@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const { connectDB, sequelize } = require('./config/db');
-const apiRoutes = require('./router');
+const apiRoutes = require('./routes/router');
 const contactRoutes = require('./routes/contactRoutes');
 
 const app = express();
@@ -20,8 +20,12 @@ sequelize.sync({ alter: true }).then(() => {
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
 
+// app.use('/uploads', express.static('uploads'));
+// app.use(express.static('public'));
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/api', apiRoutes);
 

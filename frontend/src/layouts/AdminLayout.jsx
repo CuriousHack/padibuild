@@ -1,9 +1,21 @@
 import { Outlet, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, FileText, Image, Users, LogOut } from 'lucide-react';
+import { LayoutDashboard, FileText, Image, Users, CircleUserRound, LogOut } from 'lucide-react';
 
 const AdminLayout = () => {
     const navigate = useNavigate();
     const user = JSON.parse(localStorage.getItem('padiUser') || '{}');
+    const backendUrl = import.meta.env.VITE_API_URL || '';
+
+    // Helper to resolve the image path
+    const getProfilePic = () => {
+        if (!user.profilePicture) return `https://ui-avatars.com/api/?name=${user.username}`;
+        
+        // If it's already a full URL (like an external link), return it
+        if (user.profilePicture.startsWith('http')) return user.profilePicture;
+
+        // Otherwise, append the dynamic backend URL
+        return `${backendUrl}/${user.profilePicture}`;
+    };
 
     const handleLogout = () => {
         localStorage.removeItem('padiToken');
@@ -11,12 +23,15 @@ const AdminLayout = () => {
         navigate('/admin/login');
     };
 
-    const menuItems = [
-        { icon: <LayoutDashboard size={20} />, label: 'Overview', path: '/admin/dashboard' },
-        { icon: <Users size={20} />, label: 'Editors', path: '/admin/editors' },
-        { icon: <FileText size={20} />, label: 'Blog Posts', path: '/admin/blog' },
-        { icon: <Image size={20} />, label: 'Gallery', path: '/admin/gallery' },
+    const MenuItems = [
+        { icon: <LayoutDashboard size={20} />, label: 'Overview', path: '/admin/dashboard', roles: ['admin', 'editor'] },
+        { icon: <Users size={20} />, label: 'Editors', path: '/admin/editors', roles: ['admin'] }, // Admin only
+        { icon: <FileText size={20} />, label: 'Blog Posts', path: '/admin/blog', roles: ['admin', 'editor'] },
+        { icon: <Image size={20} />, label: 'Gallery', path: '/admin/gallery', roles: ['admin', 'editor'] },
+        { icon: <CircleUserRound size={20} />, label: 'My Profile', path: '/admin/profile', roles: ['admin', 'editor'] },
     ];
+
+    const filteredMenuItems = MenuItems.filter(item => item.roles.includes(user.role));
 
     return (
         <div className="flex min-h-screen bg-gray-100">
@@ -26,7 +41,7 @@ const AdminLayout = () => {
                     PADI<span className="text-padi-red">BUILD</span>
                 </div>
                 <nav className="flex-1 p-4 space-y-2">
-                    {menuItems.map((item) => (
+                    {filteredMenuItems.map((item) => (
                         <button 
                             key={item.label}
                             onClick={() => navigate(item.path)}
@@ -51,7 +66,12 @@ const AdminLayout = () => {
                     <div className="flex items-center gap-3">
                         <span className="text-sm font-medium text-gray-700">{user.username}</span>
                         <div className="w-10 h-10 rounded-full bg-gray-200 border border-gray-300 overflow-hidden">
-                            <img src={user.profilePicture} alt="profile" className="w-full h-full object-cover" />
+                            <img 
+                                src={getProfilePic()} 
+                                alt="profile" 
+                                className="w-full h-full object-cover" 
+                                onError={(e) => { e.target.src = `https://ui-avatars.com/api/?name=${user.username}`; }}
+                            />
                         </div>
                     </div>
                 </header>
