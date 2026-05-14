@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const { connectDB, sequelize } = require('./config/db');
+const apiRoutes = require('./router');
 const contactRoutes = require('./routes/contactRoutes');
 
 const app = express();
@@ -22,7 +23,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Routes
-app.use('/', contactRoutes);
+app.use('/api', apiRoutes);
 
 // Start Server
 app.listen(PORT, () => {
